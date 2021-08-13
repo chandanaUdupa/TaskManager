@@ -3,7 +3,7 @@ TaskManager
 
 Language used for development
 -----------------------------
-C# .Net
+C# .Net (WebAPI)
 
 Tools
 -----
@@ -21,3 +21,6 @@ RestAPI Documentation
 ----------------------
 Used Swagger for documenting all the APIs
 
+Database
+--------
+InMemory database
