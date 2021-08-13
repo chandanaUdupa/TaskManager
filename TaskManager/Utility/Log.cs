@@ -34,21 +34,21 @@ namespace TaskManager.Utility
         public static void TaskManagerSingleLogInfo(this ILogger log, string message)
         {
             log.LogInformation("");
-            log.LogInformation("-- PUBLIC MESSAGE -- " + message);
+            log.LogInformation("-- Task Manager -- " + message);
             log.LogInformation("");
         }
 
         public static void TaskManagerSingleLogError(this ILogger log, string message)
         {
             log.LogError("");
-            log.LogError("-- PUBLIC MESSAGE -- " + message);
+            log.LogError("-- Task Manager -- " + message);
             log.LogError("");
         }
 
         public static void TaskManagerSingleLogWarning(this ILogger log, string message)
         {
             log.LogWarning("");
-            log.LogWarning("-- PUBLIC MESSAGE -- " + message);
+            log.LogWarning("-- Task Manager -- " + message);
             log.LogWarning("");
         }
     }
