@@ -323,7 +323,7 @@ namespace TaskManager.Controllers
                 Process process = await _context.Processes.FindAsync(id);
                 if (process == null)
                 {
-                    return NotFound();
+                    return NotFound("There is no process in the Task Manager with the id " + id.ToString());
                 }
 
                 _context.Processes.Remove(process);
@@ -372,7 +372,7 @@ namespace TaskManager.Controllers
                 processList = await _context.Processes.AsNoTracking().Where(p => Enum.GetName(typeof(Priority), p.Priority).ToLower().Equals(priority.ToLower())).ToListAsync();
                 if (processList == null || processList.Count == 0)
                 {
-                    return NotFound();
+                    return NotFound("There is no process in the Task Manager with the priority "+ priority);
                 }
                 foreach (Process prc in processList)
                 {
@@ -427,7 +427,7 @@ namespace TaskManager.Controllers
                 List<Process> processList = await _context.Processes.AsNoTracking().ToListAsync();
                 if (processList == null || processList.Count == 0)
                 {
-                    return NotFound();
+                    return NotFound("There is no process in the Task Manager");
                 }
 
                 foreach (Process prc in processList)
